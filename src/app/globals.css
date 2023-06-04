@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+  @apply w-full flex flex-col justify-center items-center;
+}
+
+.contain {
+  @apply w-[95%] md:w-[96%] lg:w-[92%]
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.imgbg{
+ background-image: url('/Discover.png');
+background-repeat: no-repeat;
+background-position: center center;
+ background-size: 100% 100%;
+}
