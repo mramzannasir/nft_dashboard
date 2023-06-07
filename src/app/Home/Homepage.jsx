@@ -1,8 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
+import All from "./Bids/All";
+import Artwork from "./Bids/Artwork";
+import Book from "./Bids/Book";
 
 const Homepage = () => {
-	const [bidsPage, setBidsPage] = useState('1')
+	const [bidsPage, setBidsPage] = useState("1");
 	return (
 		<main className="w-full">
 			{/* Top Banner */}
@@ -28,7 +31,11 @@ const Homepage = () => {
 				</div>
 				<div className="flex h-auto w-full flex-col gap-[20px] rounded-xl bg-white p-[15px]  dark:bg-dark md:h-[300px] md:flex-row md:p-[18px] lg:h-[250px] lf:h-[300px] lf:w-[50%]  3xl:h-[265px] 4xl:h-[250px]">
 					<div className="w-full md:w-[50%]">
-						<img src="/header.png" className=" md:h-full w-full" alt="" />
+						<img
+							src="/header.png"
+							className=" h-[229px] w-full md:h-full"
+							alt=""
+						/>
 					</div>
 					<div className="w-full md:w-[50%]">
 						<div className="flex w-full flex-col gap-3">
@@ -80,7 +87,7 @@ const Homepage = () => {
 									</div>
 								</div>
 
-								<div className="flex items-center justify-center gap-6 md:gap-0 md:justify-between ">
+								<div className="flex items-center justify-center gap-6 md:justify-between md:gap-0 ">
 									<button className="h-[40px] w-[145px] rounded-[9px] bg-blue text-[14px] font-semibold text-white">
 										Explore Now
 									</button>
@@ -95,17 +102,40 @@ const Homepage = () => {
 			</div>
 
 			{/* 2nd section bid */}
-			<div className="w-full static">
-			<div className="flex w-full items-center justify-between mb-[30px] mt-[70px]">
-				<div>
-					<p className="text-lg font-semibold text-black dark:text-white">Trending Bids</p>
+			<div className="w-full">
+				<div className="mb-[30px] mt-[70px] flex w-full items-center justify-between">
+					<div>
+						<p className="text-lg font-semibold text-black dark:text-white">
+							Trending Bids
+						</p>
+					</div>
+					<div className="flex items-center gap-2 text-black dark:text-white md:gap-3">
+						<button
+							onClick={() => setBidsPage("1")}
+							className={`flex h-[25px] items-center justify-center px-2 text-sm transition-all duration-500 ${
+								bidsPage === "1" ? "bg-blue text-white" : ""
+							}  rounded-[12px]`}>
+							All
+						</button>
+						<button
+							onClick={() => setBidsPage("2")}
+							className={`flex h-[25px] items-center justify-center px-2 text-sm transition-all duration-500 ${
+								bidsPage === "2" ? "bg-blue text-white" : ""
+							}  rounded-[12px]`}>
+							Artwork
+						</button>
+						<button
+							onClick={() => setBidsPage("3")}
+							className={`flex h-[25px] items-center justify-center px-2 text-sm transition-all duration-500 ${
+								bidsPage === "3" ? "bg-blue text-white" : ""
+							}  rounded-[12px]`}>
+							Book
+						</button>
+					</div>
 				</div>
-				<div className="flex items-center gap-2 md:gap-3 text-black dark:text-white">
-					<button className={`text-sm px-2 py-[1px] bg-blue rounded-[14px]`} >All</button>
-					<button className={`text-sm px-2 py-[1px] bg-blue rounded-[14px]`} >Artwork</button>
-					<button className={`text-sm px-2 py-[1px] bg-blue rounded-[14px]`} >Bool</button>
-				</div>
-			</div>
+				{bidsPage === "1" && <All />}
+				{bidsPage === "2" && <Artwork />}
+				{bidsPage === "3" && <Book />}
 			</div>
 		</main>
 	);

@@ -16,6 +16,8 @@ import { AiOutlineHeart, AiOutlineStar } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { GrClose } from "react-icons/gr";
+import { BiBarChart } from "react-icons/bi";
+
 const canAccessLocalStorage = () => {
 	try {
 		localStorage.setItem("test", "test");
@@ -73,7 +75,7 @@ const Navbar = () => {
 				</div>
 				<div>
 					<div className="flex items-center gap-3 md:gap-5 ">
-						<div className="text-gray transition-all duration-500">
+						<div className="text-gray transition-all lg:hidden duration-500">
 							{menuShow === true ? (
 								<HiMenuAlt3 onClick={() => setMenuShow(!menuShow)} size={25} />
 							) : (
@@ -152,6 +154,21 @@ const Navbar = () => {
 										<MdDashboard size={23} />
 										<div>
 											<p className="text-base font-normal">Dashboard</p>
+										</div>
+									</Link>
+								</div>
+								<div className="w-full">
+									<Link
+										onClick={() => setMenuShow(false)}
+										href={`/statistics`}
+										className={`${
+											pathname === "/statistics"
+												? "bg-light text-blue "
+												: "text-[#65646A]"
+										} flex h-[45px] w-[100%] items-center gap-2 rounded-l-lg pl-2 duration-300`}>
+										<BiBarChart size={23} />
+										<div>
+											<p className="text-base font-normal">Statistics</p>
 										</div>
 									</Link>
 								</div>
