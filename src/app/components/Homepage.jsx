@@ -26,9 +26,9 @@ const Homepage = () => {
 						</div>
 					</div>
 				</div>
-				<div className="flex h-[228px] w-full flex-col gap-[20px] rounded-xl bg-white p-[10px] dark:bg-dark md:h-[300px] md:flex-row md:p-[18px] lg:h-[250px] lf:h-[300px] lf:w-[50%] lf:w-[50%] 3xl:h-[265px] 4xl:h-[250px]">
+				<div className="flex h-auto w-full flex-col gap-[20px] rounded-xl bg-white p-[15px]  dark:bg-dark md:h-[300px] md:flex-row md:p-[18px] lg:h-[250px] lf:h-[300px] lf:w-[50%]  3xl:h-[265px] 4xl:h-[250px]">
 					<div className="w-full md:w-[50%]">
-						<img src="/header.png" className=" w-full" alt="" />
+						<img src="/header.png" className=" md:h-full w-full" alt="" />
 					</div>
 					<div className="w-full md:w-[50%]">
 						<div className="flex w-full flex-col gap-3">
@@ -80,11 +80,11 @@ const Homepage = () => {
 									</div>
 								</div>
 
-								<div className="flex items-center justify-center gap-10 md:gap-0 md:justify-between ">
-									<button className="h-[40px] w-[131px] rounded-[9px] bg-blue text-[14px] font-semibold text-white">
+								<div className="flex items-center justify-center gap-6 md:gap-0 md:justify-between ">
+									<button className="h-[40px] w-[145px] rounded-[9px] bg-blue text-[14px] font-semibold text-white">
 										Explore Now
 									</button>
-									<button className="h-[40px] w-[131px] rounded-[9px] bg-red text-[14px] font-semibold text-white">
+									<button className="h-[40px] w-[145px] rounded-[9px] bg-red text-[14px] font-semibold text-white">
 										Create
 									</button>
 								</div>
