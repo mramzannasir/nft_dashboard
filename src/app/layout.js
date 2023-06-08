@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
 	const [newWidth, setNewWidth] = useState(false);
 	return (
 		<html lang="en">
-			<body className="bg-light dark:bg-modeDark w-full  duration-100 transition-all">
+			<body className="bg-light dark:bg-modeDark w-full  duration-100 transition-all overflow-x-hidden box-border">
 				<sidebarWidth.Provider value={{ newWidth, setNewWidth }}>
 					<main className="wrapper relative">
 						{/* Body */}
