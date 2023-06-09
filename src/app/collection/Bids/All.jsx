@@ -1,14 +1,14 @@
-"use client";
-import React from "react"
+import React from "react";
 import { motion } from "framer-motion";
-const page = () => {
+
+const All = () => {
 	return (
-		<main className="w-full text-black dark:text-white">
-			<h1 className="text-lg font-semibold">Saved items</h1>
-			<p className="text-xs font-normal opacity-70">Welcome Saved Page</p>
-			<motion.main
-			
-			className="grid w-full grid-cols-1 mt-[40px] gap-7 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+		<motion.main
+			initial={{ opacity: 0, scale: 0.9 }}
+			animate={{ opacity: 1, scale: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.3 }}
+			className="grid w-full grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
 			<div className="h-[433px] w-full rounded-[18px] bg-white p-5 dark:bg-dark">
 				<img src="primary.png" className="w-full h-[187px]" alt="" />
 				<div className="my-[30px] flex w-full flex-col gap-[0px]">
@@ -298,8 +298,7 @@ const page = () => {
 				</div>
 			</div>
 		</motion.main>
-		</main>
 	);
 };
 
-export default page;
+export default All;

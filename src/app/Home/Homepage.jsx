@@ -87,12 +87,12 @@ const Homepage = () => {
 									</div>
 								</div>
 
-								<div className="flex items-center justify-center gap-6 md:justify-between md:gap-0 ">
+								<div className="flex items-center justify-center gap-6 md:justify-start  md:gap-4">
 									<button className="h-[40px] w-[145px] rounded-[9px] bg-blue text-[14px] font-semibold text-white">
-										Explore Now
+										Place a bid
 									</button>
 									<button className="h-[40px] w-[145px] rounded-[9px] bg-red text-[14px] font-semibold text-white">
-										Create
+									Details
 									</button>
 								</div>
 							</div>

@@ -17,6 +17,7 @@ import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { GrClose } from "react-icons/gr";
 import { BiBarChart } from "react-icons/bi";
+import {AiFillLeftCircle} from "react-icons/ai"
 
 const canAccessLocalStorage = () => {
 	try {
@@ -58,7 +59,7 @@ const Navbar = () => {
 			<div className="flex w-full items-center justify-between">
 				<div className="flex items-center gap-2">
 					<div>
-						<img src="/Logo.png" className="h-[43px] hidden sm:block" alt="" />
+						<img src="/Logo.png" className="h-[43px] hidden sm:block md:hidden" alt="" />
 					</div>
 					<div className="flex h-[45px] w-[192px] items-center justify-center rounded-xl bg-white dark:bg-dark md:w-[382px]">
 						<div className="flex h-full w-[35px] items-center justify-center">
@@ -126,8 +127,11 @@ const Navbar = () => {
 						animate={{ opacity: 1, x: 0 }}
 						exit={{ opacity: 0, x: -500 }}
 						transition={{ duration: 0.8 }}
-						className="fixed left-0 top-0 z-50 h-full w-[50%] bg-white shadow-xl shadow-[#000000b4]">
+						className="fixed left-0 top-0 z-50 h-full w-[50%] bg-white dark:bg-dark text-black dark:text-white shadow-xl shadow-[#000000b4]">
 						<div className="flex w-full flex-col pl-3">
+							<div className="absolute top-[2rem] right-[1px] text-gray rounded-full ">
+								<AiFillLeftCircle size={30} onClick={() => setMenuShow(false)} className="" />
+							</div> 
 							<div className="flex w-full items-center gap-2">
 								<div>
 									<img
@@ -148,7 +152,7 @@ const Navbar = () => {
 										href={`/`}
 										className={`${
 											pathname === "/"
-												? "bg-light text-blue "
+												? "bg-light dark:bg-modeDark text-blue "
 												: "text-[#65646A]"
 										} flex h-[45px] w-[100%] items-center gap-2 rounded-l-lg pl-2 duration-300`}>
 										<MdDashboard size={23} />
@@ -163,7 +167,7 @@ const Navbar = () => {
 										href={`/statistics`}
 										className={`${
 											pathname === "/statistics"
-												? "bg-light text-blue "
+												? "bg-light dark:bg-modeDark text-blue "
 												: "text-[#65646A]"
 										} flex h-[45px] w-[100%] items-center gap-2 rounded-l-lg pl-2 duration-300`}>
 										<BiBarChart size={23} />
@@ -178,7 +182,7 @@ const Navbar = () => {
 										href={`/bid`}
 										className={`${
 											pathname === "/bid"
-												? "bg-light text-blue  "
+												? "bg-light dark:bg-modeDark text-blue  "
 												: "text-[#65646A]"
 										} flex h-[45px] w-[100%] items-center gap-2 rounded-md pl-2 duration-300`}>
 										<HiOutlineClipboardList size={23} />
@@ -193,7 +197,7 @@ const Navbar = () => {
 										href={`/saved`}
 										className={`${
 											pathname === "/saved"
-												? "bg-light text-blue "
+												? "bg-light dark:bg-modeDark text-blue "
 												: "text-[#65646A]"
 										} flex h-[45px] w-[100%] items-center gap-2 rounded-md pl-2 duration-300`}>
 										<AiOutlineHeart size={23} />
@@ -208,7 +212,7 @@ const Navbar = () => {
 										href={`/collection`}
 										className={`${
 											pathname === "/collection"
-												? "bg-light text-blue "
+												? "bg-light dark:bg-modeDark text-blue "
 												: "text-[#65646A]"
 										} flex h-[45px] w-[100%] items-center gap-2 rounded-md pl-2 duration-300`}>
 										<AiOutlineStar size={23} />
@@ -223,7 +227,7 @@ const Navbar = () => {
 										href={`/profile`}
 										className={`${
 											pathname === "/profile"
-												? "bg-light text-blue "
+												? "bg-light dark:bg-modeDark text-blue "
 												: "text-[#65646A]"
 										} flex h-[45px] w-[100%] items-center gap-2 rounded-md pl-2 duration-300`}>
 										<CgProfile size={23} />
